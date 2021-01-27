@@ -1,10 +1,9 @@
 import React from 'react'
+import Section from '../components/Section';
 
 function Home() {
     return (
-        <React.Fragment>
-
-        </React.Fragment>
+        <Section dark={true}/>
     )
 }
 
