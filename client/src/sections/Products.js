@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Section from '../components/Section';
+import '../App.css';
 
-function Products() {
+const Products = React.forwardRef((props, ref) => {
     return (
-        <div>
-            
-        </div>
+        <section id='/products' ref={ref} className='h-screen w-screen bg-main flex justify-center items-center'>
+            Products
+        </section>
     )
-}
+});
 
 export default Products;

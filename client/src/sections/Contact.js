@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Section from '../components/Section';
+import '../App.css';
 
-function Contact() {
+const Contact = React.forwardRef((props, ref) => {
     return (
-        <div>
-            
-        </div>
+        <section id='/contact' ref={ref} className='h-screen w-screen bg-navbar flex justify-center items-center'>
+            Contact us
+        </section>
     )
-}
+});
 
 export default Contact;

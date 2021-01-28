@@ -66,7 +66,11 @@ module.exports = {
       auto: 'auto',
     },
     maxWidth: {
-      'screen': '1920px'
+      'screen': '1920px',
+      'main': '80%'
+    },
+    maxHeight: {
+      'screen': '1080px'
     },
     backgroundColor: theme => ({
       ...theme('colors'),

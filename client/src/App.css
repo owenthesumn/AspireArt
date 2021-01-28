@@ -1,0 +1,21 @@
+.activePage {
+    transform: translateY(0%);
+    opacity: 1;
+    /* transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out; */
+}
+
+.prevPage {
+    transform: translateY(-100%);
+    /* transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out; */
+}
+
+.nextPage {
+    transform: translateY(100%);
+    /* transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out; */
+}

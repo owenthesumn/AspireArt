@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 
-function Section({dark}) {
-    // const [dark, setDark] = useState(false);
-
+function Section({pageClass, pageContent}) {
     return (
-        <section className='h-screen w-screen' style={{backgroundColor: dark ? '#13401A' : '#F2F2F2'}}>
-            
+        <section className={pageClass}>
+            {pageContent}
         </section>
     )
 }

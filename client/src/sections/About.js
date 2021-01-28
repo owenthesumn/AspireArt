@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Section from '../components/Section';
+import '../App.css';
 
-function About() {
+const About = React.forwardRef((props, ref) => {
     return (
-        <div>
-            
-        </div>
+        <section id='/about' ref={ref} className='h-screen w-screen bg-navbar flex justify-center items-center'>
+            About
+        </section>
     )
-}
+});
 
 export default About;

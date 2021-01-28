@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
 import Section from '../components/Section';
+import '../App.css';
 
-function Home() {
+const Home = React.forwardRef((props, ref) => {
     return (
-        <Section dark={true}/>
+        <section id='/' ref={ref} className='h-screen w-screen bg-main flex justify-center items-center'>
+            Home
+        </section>
     )
-}
+});
 
 export default Home;
