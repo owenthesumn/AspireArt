@@ -10,6 +10,7 @@ import Section from './components/Section';
 
 function App() {
   const [selectedNav, setSelectedNav] = useState({home: true, about: false, projects:false, contact: false});
+  const [selectedBtn, setSelectedBtn] = useState({home: true, contact: false});
   const [darkSect, setDarkSect] = useState(false);
   const [pageIndex, setPageIndex] = useState(0);
   const refHome = useRef(null);
@@ -21,17 +22,35 @@ function App() {
 
   useEffect(() => {
       window.addEventListener('wheel', handelWheel);
+      // console.log(selectedBtn.home);
+      console.log(selectedBtn.contact);
+      if (pageIndex === 0 || pageIndex === 2) {
+        if (selectedBtn.home !== true) {
+          setDarkSect(false);
+        }
+      } else {
+        if (selectedBtn.contact !== true) {
+          setDarkSect(true);
+          setSelectedBtn({home:false, contact:true})
+        }
+      }
+      console.log(pageIndex);
       return(() => {
         window.removeEventListener('wheel', handelWheel);
       })
   })
 
   function handelWheel(Event) {
+    let selectedButton;
     setTimeout(() => {
       if (Event.deltaY > 0 && pageIndex < 3) {
         setPageIndex(pageIndex+1);
+        selectedButton = {home: false, contact: false};
+        setSelectedBtn(selectedButton);
       } else if (Event.deltaY <= 0 && pageIndex > 0 ) {
         setPageIndex(pageIndex-1);
+        selectedButton = {home: true, contact: false};
+        setSelectedBtn(selectedButton);
       }
     }, 500);
   }
